@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RapidPay.Api.ResponseDTOs;
 using RapidPay.Data.RequestDTOs;
 using RapidPay.Services.Interfaces;
@@ -6,6 +7,7 @@ using RapidPay.Services.Interfaces;
 namespace RapidPay.Api.Controllers
 {
 	[Route("api/[controller]")]
+	[Authorize(AuthenticationSchemes = "Bearer")]
 	[ApiController]
 	public class CardsController : ControllerBase
 	{
@@ -20,7 +22,7 @@ namespace RapidPay.Api.Controllers
 			return StatusCode(StatusCodes.Status201Created, createCard);
 		}
 
-		[HttpGet("/{cardNumber}")]
+		[HttpGet("{cardNumber}")]
 		public async Task<IActionResult> GetBalance([FromRoute] string cardNumber)
 		{
 			var card = await _cardService.GetCardAsync(cardNumber);
@@ -36,7 +38,7 @@ namespace RapidPay.Api.Controllers
 			return Ok(result);
 		}
 
-		[HttpPut("/{cardNumber}")]
+		[HttpPut("{cardNumber}")]
 		public async Task<IActionResult> MakePayment([FromRoute] string cardNumber, [FromBody] Payment payment)
 		{
 			await _cardService.MakePaymentAsync(cardNumber, payment.Amount);
