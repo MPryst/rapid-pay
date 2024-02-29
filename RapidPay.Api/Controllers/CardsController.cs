@@ -18,6 +18,11 @@ namespace RapidPay.Api.Controllers
 		[HttpPost]
 		public async Task<IActionResult> CreateCard([FromBody] CreateCard createCard)
 		{
+			var existingCard = await _cardService.GetCardAsync(createCard.Numbers);
+			if (existingCard != null) { 
+				return StatusCode(StatusCodes.Status409Conflict, "Card already exists.");
+			}
+
 			await _cardService.CreateAsync(createCard);
 			return StatusCode(StatusCodes.Status201Created, createCard);
 		}
