@@ -1,1 +1,1 @@
-# rapid-pay
+## Rapid pay
