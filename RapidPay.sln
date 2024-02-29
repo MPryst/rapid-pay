@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidPay.Api", "RapidPay.Api\RapidPay.Api.csproj", "{E29E01E7-1298-42CF-BA68-A7F9AF22B0D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.Api", "RapidPay.Api\RapidPay.Api.csproj", "{E29E01E7-1298-42CF-BA68-A7F9AF22B0D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidPay.Services", "RapidPay.Services\RapidPay.Services.csproj", "{FAD32CEE-3A7B-4632-BDDE-F1B85EA3069E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.Services", "RapidPay.Services\RapidPay.Services.csproj", "{FAD32CEE-3A7B-4632-BDDE-F1B85EA3069E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidPay.Data", "RapidPay.Repositories\RapidPay.Data.csproj", "{C97B8920-E8F2-48B0-B441-9CB51C893970}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.Data", "RapidPay.Repositories\RapidPay.Data.csproj", "{C97B8920-E8F2-48B0-B441-9CB51C893970}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidPay.UFE", "RapidPay.UFE\RapidPay.UFE.csproj", "{3E167C88-9DBC-4E0D-9140-658669739F61}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidPay.Domain", "RapidPay.Domain\RapidPay.Domain.csproj", "{BED0A535-BF36-4696-B704-927D9ACD8E90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.UFE", "RapidPay.UFE\RapidPay.UFE.csproj", "{3E167C88-9DBC-4E0D-9140-658669739F61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51078F4D-EC10-41D6-9895-BF7F031D3CBF}"
 	ProjectSection(SolutionItems) = preProject
@@ -40,10 +38,6 @@ Global
 		{3E167C88-9DBC-4E0D-9140-658669739F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E167C88-9DBC-4E0D-9140-658669739F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E167C88-9DBC-4E0D-9140-658669739F61}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BED0A535-BF36-4696-B704-927D9ACD8E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BED0A535-BF36-4696-B704-927D9ACD8E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BED0A535-BF36-4696-B704-927D9ACD8E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BED0A535-BF36-4696-B704-927D9ACD8E90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

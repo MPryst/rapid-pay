@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Implementations\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\RapidPay.Repositories\RapidPay.Data.csproj" />
+    <ProjectReference Include="..\RapidPay.UFE\RapidPay.UFE.csproj" />
   </ItemGroup>
 
 </Project>
