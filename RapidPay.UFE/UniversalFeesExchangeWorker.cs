@@ -14,10 +14,8 @@ namespace RapidPay.UFE
 		{
 			while (!stoppingToken.IsCancellationRequested)
 			{
-				UniversalExchange.Fee = GetNextFeeValue(UniversalExchange.Fee);
-				await Task.Delay(2000, stoppingToken);
-				Console.WriteLine(UniversalExchange.Fee);
-				//await Task.Delay(3600000, stoppingToken);
+				UniversalExchange.Fee = GetNextFeeValue(UniversalExchange.Fee);				
+				await Task.Delay(3600000, stoppingToken);
 			}
 		}
 
