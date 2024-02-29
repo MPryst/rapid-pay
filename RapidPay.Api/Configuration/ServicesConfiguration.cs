@@ -14,9 +14,9 @@ namespace RapidPay.Api.Configuration
 		{
 			services.AddControllers();
 			services.AddEndpointsApiExplorer();
-			services.AddSwaggerGen();			
+			services.AddSwaggerGen();
 			services.AddDbContext<RapidPayDbContext>(option => option.UseSqlServer(configuration.GetConnectionString("RapidPay")));
-			services.AddHostedService<UniversalFeesExchangeWorker>();
+			services.AddHostedService<UniversalFeesExchangeWorker>();			
 
 			// Repositories
 			services.AddScoped<ICardsRepository, CardsRepository>();

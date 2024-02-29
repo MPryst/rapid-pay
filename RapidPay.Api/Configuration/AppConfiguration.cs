@@ -1,4 +1,6 @@
-﻿namespace RapidPay.Api.Configuration
+﻿using RapidPay.Api.Authorization;
+
+namespace RapidPay.Api.Configuration
 {
 	public static class AppConfiguration
 	{
@@ -11,8 +13,11 @@
 			}
 
 			app.UseHttpsRedirection();
+			app.UseAuthentication();
 			app.UseAuthorization();
+			app.MapPost("/connect/token", (HttpContext context, JwtOptions jwtOptions) => TokenEndpoint.Connect(context, jwtOptions));
 			app.MapControllers();
+	
 		}
 	}
 }
